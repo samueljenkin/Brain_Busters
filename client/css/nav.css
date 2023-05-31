@@ -1,0 +1,37 @@
+.header-nav {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.header-nav li {
+    padding: 0 0.5rem;
+}
+
+/* If using material-symbols-outlined */
+/* .material-symbols-outlined {
+    cursor: pointer;
+}
+
+.material-symbols-outlined.add-treasure {
+    color: rgb(7, 92, 49);
+}
+
+.material-symbols-outlined.edit-treasure {
+    color: rgb(165, 111, 12);
+}
+
+.material-symbols-outlined.sign-up {
+    color: rgb(9, 51, 98);
+}
+
+.material-symbols-outlined.login,
+.material-symbols-outlined.delete {
+    color: rgb(211, 34, 28);
+} */
