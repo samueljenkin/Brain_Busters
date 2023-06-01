@@ -1,4 +1,4 @@
-function renderQuizzesList() {
+function renderQuizList() {
     document.querySelector('#page').innerHTML = `
         <section class="quiz-list">
             ${renderQuizzes()}

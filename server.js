@@ -31,7 +31,7 @@ app.use(express.json())
 //  ↓
 // routes
 app.use('/api/quizzes', quizzesController)
-// app.use('/api/users', usersController)
+app.use('/api/users', usersController)
 // app.use('/api/sessions', sessionsController)
 //  ↓
 // send response back to user
