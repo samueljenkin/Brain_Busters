@@ -18,7 +18,7 @@ app.listen(port, () => console.log(`listening on http://localhost:${port}`))
 // receive request (from browser)
 //  ↓
 // log request info in the terminal
-// app.use(logger)
+app.use(logger)
 //  ↓
 // send back our SPA
 app.use(express.static('client'))
