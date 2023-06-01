@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
         if (user && isValidPassword) {
           // log the user in
           req.session.userId = user.id
-          res.json({ email: user.email })
+          res.json(user.email)
         }
       }
     })

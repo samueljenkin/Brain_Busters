@@ -47,7 +47,7 @@ function renderAddQuiz() {
 	})
 	  .then(res => res.json())
 	  .then(quiz => {
-		state.treasures.push(quiz)
+		state.quizzes.push(quiz)
 		renderQuizList()
 	  })
   }
