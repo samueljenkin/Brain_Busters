@@ -20,14 +20,30 @@ router.post('/', (req, res) => {
     const correct_answer = req.body.correct_answer
   
     Quiz
-      .create(question, answer_a, answer_b, answer_c, answer_d, correct_answer)
-      .then(quiz => res.json(quiz))
-  })
-  router.delete('/:id', (req, res) => {
+        .create(question, answer_a, answer_b, answer_c, answer_d, correct_answer)
+        .then(quiz => res.json(quiz))
+})
+
+router.delete('/:id', (req, res) => {
     const quizId = req.params.id
   
     Quiz
-      .delete(quizId)
-      .then(() => res.json({ message: 'deleted successfully' }))
-  })
+        .delete(quizId)
+        .then(() => res.json({ message: 'deleted successfully' }))
+})
+
+router.put('/:id', (req, res) => {
+    const quizId = req.params.id
+    const question = req.body.question
+    const answer_a = req.body.answer_a
+    const answer_b = req.body.answer_b
+    const answer_c = req.body.answer_c
+    const answer_d = req.body.answer_d
+    const correct_answer = req.body.correct_answer
+
+    Quiz
+        .edit(quizId, question, answer_a, answer_b, answer_c, answer_d, correct_answer)
+        .then(quiz => res.json(quiz))
+})
+
 module.exports = router

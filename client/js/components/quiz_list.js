@@ -16,20 +16,21 @@ function renderQuizzes() {
             <p>${quiz.answer_b}</p>
             <p>${quiz.answer_c}</p>
             <p>${quiz.answer_d}</p>
-            <span class="edit" onClick="editQuiz(event)">edit</span>
+            <span class="edit" onClick="renderEditQuiz(event)">edit</span>
             <span class="delete" onClick="deleteQuiz(event)">delete</span>
         </section>
     `).join('')
 }
+
 function deleteQuiz(event) {
     const deleteBtn = event.target
     const quizDOM = deleteBtn.closest('.quiz')
     const quizId = quizDOM.dataset.id
     fetch(`/api/quizzes/${quizId}`, {
-      method: 'DELETE'
+        method: 'DELETE'
     })
-      .then(() => {
-        state.quizzes = state.quizzes.filter(t => t.id != quizId)
-        renderQuizList()
-      })
-  }
+        .then(() => {
+            state.quizzes = state.quizzes.filter(t => t.id != quizId)
+            renderQuizList()
+        })
+}
