@@ -23,5 +23,11 @@ router.post('/', (req, res) => {
       .create(question, answer_a, answer_b, answer_c, answer_d, correct_answer)
       .then(quiz => res.json(quiz))
   })
-
+  router.delete('/:id', (req, res) => {
+    const quizId = req.params.id
+  
+    Quiz
+      .delete(quizId)
+      .then(() => res.json({ message: 'deleted successfully' }))
+  })
 module.exports = router

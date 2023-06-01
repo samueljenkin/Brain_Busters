@@ -20,7 +20,12 @@ const Quiz = {
         return db
             .query(sql, [question, answer_a, answer_b, answer_c, answer_d, correct_answer])
             .then(dbRes => dbRes.rows[0])
-        }
+    },
+    delete: (quizId) => {
+        const sql = 'DELETE FROM quizzes WHERE id = $1'
+    
+        return db.query(sql, [quizId])
+      }
 
 }
 
