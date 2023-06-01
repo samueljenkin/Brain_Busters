@@ -9,10 +9,10 @@ fetch('/api/quizzes')
         renderQuizList()
     })
 
-    fetch('/api/sessions')
-  .then(res => res.json())
-  .then(data => {
-    if (data.result === 'successful') {
-      state.loggedInUser = data.email
-    }
-  })
+fetch('/api/sessions')
+    .then(res => res.json())
+    .then(data => {
+        if (data.result === 'successful') {
+            state.loggedInUser = data.email
+        }
+    })
