@@ -27,11 +27,11 @@ app.use(express.static('client'))
 app.use(express.json())
 //  ↓
 // enable sessions
-// app.use(sessions)
+app.use(sessions)
 //  ↓
 // routes
 app.use('/api/quizzes', quizzesController)
 app.use('/api/users', usersController)
-// app.use('/api/sessions', sessionsController)
+app.use('/api/sessions', sessionsController)
 //  ↓
 // send response back to user
