@@ -23,7 +23,7 @@ function renderQuizzes() {
                 <label for="d">${quiz.answer_d}</label>
                 <button>Submit</button>
             </form>
-            <span class="edit" onClick="editQuiz(event)">edit</span>
+            <span class="edit" onClick="renderEditQuiz(event)">edit</span>
             <span class="delete" onClick="deleteQuiz(event)">delete</span>
         </section>
     `).join('')
