@@ -34,3 +34,11 @@ form textarea {
 .red {
     background-color: red;
 }
+h1 {
+    font-size: xx-large;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+  p {
+    font-family: "Roboto Serif", serif;
+    color: #ffd166;
+  }
