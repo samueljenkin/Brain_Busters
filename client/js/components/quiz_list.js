@@ -4,6 +4,8 @@ function renderQuizList() {
             ${renderQuizzes()}
         </section> 
     `
+    const audioGathering = document.getElementById("gatheringSound");
+    audioGathering.play();
 }
 
 function renderQuizzes() {
@@ -21,9 +23,9 @@ function renderQuizzes() {
                 <label for="c">${quiz.answer_c}</label>
                 <input type="radio" id="d" name="option" value="${quiz.answer_d}">
                 <label for="d">${quiz.answer_d}</label>
-                <button>Submit</button>
+                <button id="submitBd">Submit</button>
             </form>
-            <span class="edit" onClick="renderEditQuiz(event)">edit</span>
+            <span class="edit" onClick="editQuiz(event)">edit</span>
             <span class="delete" onClick="deleteQuiz(event)">delete</span>
         </section>
     `).join('')
@@ -33,23 +35,29 @@ function submitQuiz(event) {
     event.preventDefault();
     const form = event.target;
     const data = Object.fromEntries(new FormData(form));
-    const quizDOM = form.closest('.quiz')
-    const quizId = quizDOM.dataset.id
-
+    const quizDOM = form.closest('.quiz');
+    const quizId = quizDOM.dataset.id;
+    const audioCorrect = document.getElementById("correctSound");
+    const audioWrong = document.getElementById("wrongSound");
     const userChoice = data.option;
-    const quiz = state.quizzes.filter(quiz => quiz.id == quizId)[0]
-
+    const quiz = state.quizzes.find(quiz => quiz.id == quizId);
+    
     if (userChoice === quiz.correct_answer) {
-        renderQuizList()
-        document.querySelector('#page').innerHTML =
-        `<h2 style='color: green;'>Congratulations! Your answer is correct.</h2>` + document.querySelector('#page').innerHTML
+      renderQuizList();
+  
+      document.querySelector('#page').innerHTML =
+        `<h2 style='color: green;'>Congratulations! Your answer is correct.</h2>` +
+          document.querySelector('#page').innerHTML;
+          audioCorrect.play();
+       
     } else {
-        renderQuizList()
-        document.querySelector('#page').innerHTML =
-        `<h2 style='color: red;'>Incorrect answer. Please try again.</h2>` + document.querySelector('#page').innerHTML
+      renderQuizList();
+      document.querySelector('#page').innerHTML =
+        `<h2 style='color: red;'>Incorrect answer. Please try again.</h2>` +
+          document.querySelector('#page').innerHTML;
+        audioWrong.play();
     }
-}
-
+  }
 function deleteQuiz(event) {
     const deleteBtn = event.target
     const quizDOM = deleteBtn.closest('.quiz')
