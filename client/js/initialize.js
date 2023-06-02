@@ -6,6 +6,7 @@ fetch('/api/quizzes')
     .then(res => res.json())
     .then(quizzes => {
         state.quizzes = quizzes
+        renderSignedIn()
         renderQuizList()
     })
 
@@ -14,5 +15,7 @@ fetch('/api/sessions')
     .then(data => {
         if (data.result === 'successful') {
             state.loggedInUser = data.email
+            renderSignedIn()
+            renderQuizList()
         }
     })

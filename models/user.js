@@ -32,7 +32,7 @@ const User = {
 
         return db
             .query(sql, [name, email, passwordDigest])
-            .then(dbRes => dbRes.rows[0].email)
+            .then(dbRes => dbRes.rows[0])
     }
 }
 

@@ -36,6 +36,7 @@ function logIn(event) {
                 renderError(res.error)
             } else {
                 state.loggedInUser = res
+                renderSignedIn()
                 renderQuizList()
             }
       })
@@ -44,4 +45,35 @@ function logIn(event) {
 function renderError(errorMessage) {
     document.querySelector('#page').innerHTML =
         `<h2 style='color: red;'>${errorMessage}</h2>` + document.querySelector('#page').innerHTML
+}
+
+function renderSignedIn() {
+    document.querySelector('#controls').innerHTML =
+        `<li class="home" onClick="renderQuizList()">Home</li>
+        <li class="add-quiz" onClick="renderAddQuiz()">Create Quiz</li>`
+
+    if (state.loggedInUser) {
+        document.querySelector('#controls').innerHTML +=
+        `<li class="log-out" onClick="logOut()">Log out</li>`
+    } else {
+        document.querySelector('#controls').innerHTML +=
+        `<li class="sign-up" onClick="renderSignUp()">Sign up</li>
+        <li class="login" onClick="renderLogin()">Log in</li>`
+    }
+}
+
+function logOut() {
+    fetch('/api/sessions', {
+        method: 'DELETE'
+    })
+        .then(res => res.json())
+        .then(res => {
+            if (res.error) {
+                renderError(res.error)
+            } else if (res.message === 'success') {
+                state.loggedInUser = null
+                renderSignedIn()
+                renderQuizList()
+            }
+        })
 }

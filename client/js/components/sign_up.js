@@ -32,6 +32,9 @@ function signUp(event) {
         body: JSON.stringify(data)
     })
         .then(res => res.json())
-        .then(email => state.loggedInUser = email)
-        .then(() => renderQuizList())
+        .then(user => state.loggedInUser = user.email)
+        .then(() => {
+            renderSignedIn()
+            renderQuizList()
+        })
 }

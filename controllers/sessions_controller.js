@@ -13,10 +13,10 @@ router.post('/', (req, res) => {
         .findByEmail(email)
         .then(user => {
             if (!user || email == '' || password == '') {
-                    res.status(400).json({ error: 'email and/or password are incorrSect' })
+                res.status(400).json({ error: 'email and/or password are incorrect' })
             } else {
-                    // using bcrypt to validate the password:
-                    const isValidPassword = bcrypt.compareSync(password, user.password_digest)
+                // using bcrypt to validate the password:
+                const isValidPassword = bcrypt.compareSync(password, user.password_digest)
 
                 if (user && isValidPassword) {
                     // log the user in
@@ -36,8 +36,19 @@ router.get('/', (req, res) => {
             .findById(userId)
             .then(email => res.json({ result: 'successful', email: email }))
     } else {
-            res.json({})
+        res.json({})
     }
+})
+
+router.delete('/', (req, res) => {
+    req.session.destroy(error => {
+        if (error) {
+            res.status(200).json({ error: 'failed to log out' })
+        } else {
+            res.clearCookie('user_sid')
+            res.json({ message: 'success' })
+        }
+    })
 })
 
 module.exports = router
