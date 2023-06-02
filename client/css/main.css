@@ -25,20 +25,12 @@ form textarea {
     width: 100%;
 }
 
-/* colours */
-
-.green {
-    background-color: green;
-}
-
-.red {
-    background-color: red;
-}
 h1 {
     font-size: xx-large;
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-  }
-  p {
+}
+
+p {
     font-family: "Roboto Serif", serif;
     color: #ffd166;
-  }
+}

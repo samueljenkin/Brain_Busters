@@ -10,24 +10,24 @@
     box-shadow: 3px 3px 3px rgb(9, 51, 98);
 }
   /* Animations */
-  @keyframes fadeIn {
+@keyframes fadeIn {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
   
-  @keyframes slideIn {
+@keyframes slideIn {
     0% {
       transform: translateY(-20px);
     }
     100% {
       transform: translateY(0);
     }
-  }
+}
   
-  .quiz {
+.quiz {
     animation: fadeIn 0.10s ease-in-out, slideIn 0.9s ease-in-out;
-  }
+}
