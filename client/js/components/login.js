@@ -40,6 +40,7 @@ function logIn(event) {
             }
       })
 }
+
 function renderError(errorMessage) {
     document.querySelector('#page').innerHTML =
         `<h2 style='color: red;'>${errorMessage}</h2>` + document.querySelector('#page').innerHTML
