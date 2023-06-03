@@ -4,8 +4,8 @@ function renderQuizList() {
             ${renderQuizzes()}
         </section> 
     `
-    const audioGathering = document.getElementById("gatheringSound")
-    audioGathering.play()
+    // const audioGathering = document.getElementById("gatheringSound")
+    // audioGathering.play()
 }
 
 function renderQuizzes() {
@@ -38,6 +38,10 @@ function submitQuiz(event) {
     const quizDOM = form.closest('.quiz')
     const quizId = quizDOM.dataset.id
 
+    if (quizDOM.classList.contains('correct') || quizDOM.classList.contains('wrong')) {
+        return;
+    }
+
     const audioCorrect = document.getElementById("correctSound")
     const audioWrong = document.getElementById("wrongSound")
 
@@ -45,14 +49,16 @@ function submitQuiz(event) {
     const answer = state.quizzes.find(quiz => quiz.id == quizId).correct_answer
     
     if (userChoice === answer) {
-        renderQuizList()
-        document.querySelector('#page').innerHTML =
-            `<h2 style='color: green'>Congratulations! Your answer is correct.</h2>` + document.querySelector('#page').innerHTML
+        state.counter++
+        
+        document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Correct!</h2>` + quizDOM.innerHTML
+        document.querySelector(`[data-id="${quizId}"]`).classList.add('correct')
+
         audioCorrect.play()
     } else {
-        renderQuizList()
-        document.querySelector('#page').innerHTML =
-            `<h2 style='color: red'>Incorrect answer. Please try again.</h2>` + document.querySelector('#page').innerHTML
+        document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Wrong!</h2>` + quizDOM.innerHTML
+        document.querySelector(`[data-id="${quizId}"]`).classList.add('wrong')
+
         audioWrong.play()
     }
 }
