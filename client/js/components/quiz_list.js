@@ -38,28 +38,41 @@ function submitQuiz(event) {
     const quizDOM = form.closest('.quiz')
     const quizId = quizDOM.dataset.id
 
+    // if quiz already attempted, exit function
     if (quizDOM.classList.contains('correct') || quizDOM.classList.contains('wrong')) {
         return;
     }
 
+    // audio
     const audioCorrect = document.getElementById("correctSound")
     const audioWrong = document.getElementById("wrongSound")
 
+    // users choice & correct answer
     const userChoice = data.option
     const answer = state.quizzes.find(quiz => quiz.id == quizId).correct_answer
     
+    // if users choice equals correct answer they get a point and winning message, else losing message
     if (userChoice === answer) {
-        state.counter++
-        
+        state.attempts++
+        state.correct++
+
         document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Correct!</h2>` + quizDOM.innerHTML
         document.querySelector(`[data-id="${quizId}"]`).classList.add('correct')
 
         audioCorrect.play()
     } else {
+        state.attempts++
+
         document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Wrong!</h2>` + quizDOM.innerHTML
         document.querySelector(`[data-id="${quizId}"]`).classList.add('wrong')
 
         audioWrong.play()
+    }
+
+    // if user attempts all questions, display score
+    if (state.attempts === state.quizzes.length) {
+        document.querySelector('#page').innerHTML =
+            `<h2>You scored ${state.correct}/${state.attempts} (${state.correct / state.attempts * 100}%)</h2><button onClick="renderQuizList()">Try again?</button>` + document.querySelector('#page').innerHTML
     }
 }
 

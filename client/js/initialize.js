@@ -1,6 +1,7 @@
 const state = {
     quizzes: [],
-    counter: 0
+    attempts: 0,
+    correct: 0
 }
 
 fetch('/api/quizzes')
