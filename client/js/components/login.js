@@ -49,15 +49,15 @@ function renderError(errorMessage) {
 function renderSignedIn() {
     if (state.loggedInUser) {
         document.querySelector('#controls').innerHTML = `
-            <li class="home" onClick="renderSignedIn()">Home</li>
-            <li class="add-quiz" onClick="renderAddQuiz()">Create Quiz</li>    
-            <li class="log-out" onClick="logOut()">Log out</li>
+            <li class="material-symbols-outlined home" onClick="renderSignedIn()">home</li>
+            <li class="material-symbols-outlined add-quiz" onClick="renderAddQuiz()">add_circle</li>
+            <li class="material-symbols-outlined log-out" onClick="logOut()">logout</li>
         `
         renderQuizList()
     } else {
         document.querySelector('#controls').innerHTML = `
-            <li class="sign-up" onClick="renderSignUp()">Sign up</li>
-            <li class="login" onClick="renderLogin()">Log in</li>
+            <li class="material-symbols-outlined sign-up" onClick="renderSignUp()">person_add</li>
+            <li class="material-symbols-outlined login" onClick="renderLogin()">login</li>
         `
         renderSignUp()
     }

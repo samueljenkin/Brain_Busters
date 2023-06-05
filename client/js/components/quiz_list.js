@@ -42,8 +42,8 @@ function renderQuizzes() {
                 </ul>
                 <button>Submit</button>
             </form>
-            <span class="edit" onClick="renderEditQuiz(event)">edit</span>
-            <span class="delete" onClick="deleteQuiz(event)">delete</span>
+            <span class="material-symbols-outlined edit" onClick="renderEditQuiz(event)">edit</span>
+             <span class="material-symbols-outlined delete" onClick="deleteQuiz(event)">delete</span>
         </section>
     `).join('')
 }
