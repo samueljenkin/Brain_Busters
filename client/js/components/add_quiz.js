@@ -1,6 +1,6 @@
 function renderAddQuiz() {
 	document.querySelector('#page').innerHTML = `
-	  	<section class='create-quiz'>
+		<section class='create-quiz'>
 			<form action="" onSubmit="createQuiz(event)">
 				<h2>Add Quiz</h2>
 				<fieldset>
@@ -29,7 +29,7 @@ function renderAddQuiz() {
 				</fieldset>
 				<button>Add Quiz</button>
 			</form>
-	  	</section>
+		</section>
 	`
 }
   

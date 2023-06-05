@@ -37,7 +37,6 @@ function logIn(event) {
             } else {
                 state.loggedInUser = res
                 renderSignedIn()
-                renderQuizList()
             }
       })
 }
@@ -48,17 +47,19 @@ function renderError(errorMessage) {
 }
 
 function renderSignedIn() {
-    document.querySelector('#controls').innerHTML =
-        `<li class="home" onClick="renderQuizList()">Home</li>
-        <li class="add-quiz" onClick="renderAddQuiz()">Create Quiz</li>`
-
     if (state.loggedInUser) {
-        document.querySelector('#controls').innerHTML +=
-        `<li class="log-out" onClick="logOut()">Log out</li>`
+        document.querySelector('#controls').innerHTML = `
+            <li class="home" onClick="renderSignedIn()">Home</li>
+            <li class="add-quiz" onClick="renderAddQuiz()">Create Quiz</li>    
+            <li class="log-out" onClick="logOut()">Log out</li>
+        `
+        renderQuizList()
     } else {
-        document.querySelector('#controls').innerHTML +=
-        `<li class="sign-up" onClick="renderSignUp()">Sign up</li>
-        <li class="login" onClick="renderLogin()">Log in</li>`
+        document.querySelector('#controls').innerHTML = `
+            <li class="sign-up" onClick="renderSignUp()">Sign up</li>
+            <li class="login" onClick="renderLogin()">Log in</li>
+        `
+        renderSignUp()
     }
 }
 
@@ -73,7 +74,6 @@ function logOut() {
             } else if (res.message === 'success') {
                 state.loggedInUser = null
                 renderSignedIn()
-                renderQuizList()
             }
         })
 }

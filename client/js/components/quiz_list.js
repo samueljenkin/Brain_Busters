@@ -73,8 +73,6 @@ function submitQuiz(event) {
         state.attempts++
         state.correct++
 
-        updateScore()
-
         document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Correct!</h2>` + quizDOM.innerHTML
         document.querySelector(`[data-id="${quizId}"]`).classList.add('correct')
 
@@ -89,11 +87,14 @@ function submitQuiz(event) {
         audioWrong.play()
     }
 
+    // update the score
+    updateScore()
+
     // if user attempts all questions, display score
     if (state.attempts === state.quizzes.length) {
 
         document.querySelector('#page').innerHTML =
-            `<h2>You scored ${state.correct}/${state.attempts} (${state.correct / state.attempts * 100}%)</h2><button onClick="renderQuizList()">Try again?</button>` + document.querySelector('#page').innerHTML
+            `<h2>You scored ${state.correct}/${state.attempts} (${(state.correct / state.attempts * 100).toFixed(0)}%)</h2><button onClick="renderQuizList()">Try again?</button>` + document.querySelector('#page').innerHTML
         const scoreDiv = document.querySelector('#score')
         scoreDiv.innerHTML = ''
     }

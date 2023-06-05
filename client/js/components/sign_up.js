@@ -35,6 +35,5 @@ function signUp(event) {
         .then(user => state.loggedInUser = user.email)
         .then(() => {
             renderSignedIn()
-            renderQuizList()
         })
 }

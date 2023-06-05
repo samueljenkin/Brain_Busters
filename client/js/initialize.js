@@ -9,7 +9,6 @@ fetch('/api/quizzes')
     .then(quizzes => {
         state.quizzes = quizzes
         renderSignedIn()
-        renderQuizList()
     })
 
 fetch('/api/sessions')
@@ -18,6 +17,5 @@ fetch('/api/sessions')
         if (data.result === 'successful') {
             state.loggedInUser = data.email
             renderSignedIn()
-            renderQuizList()
-        }
+        } 
     })
