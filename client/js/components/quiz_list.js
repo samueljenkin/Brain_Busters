@@ -1,4 +1,6 @@
 function renderQuizList() {
+    state.correct = 0
+    state.attempts = 0
     document.querySelector('#page').innerHTML = `
         <section class="quiz-list">
             ${renderQuizzes()}
@@ -71,6 +73,8 @@ function submitQuiz(event) {
         state.attempts++
         state.correct++
 
+        updateScore()
+
         document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Correct!</h2>` + quizDOM.innerHTML
         document.querySelector(`[data-id="${quizId}"]`).classList.add('correct')
 
@@ -78,7 +82,8 @@ function submitQuiz(event) {
     } else {
         state.attempts++
 
-        document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Wrong!</h2>` + quizDOM.innerHTML
+        document.querySelector(`[data-id="${quizId}"]`).innerHTML = `<h2>Wrong!</h2> 
+        <h3><em>Correct Answer: ${answer}</em></h3>` + quizDOM.innerHTML
         document.querySelector(`[data-id="${quizId}"]`).classList.add('wrong')
 
         audioWrong.play()
@@ -86,8 +91,11 @@ function submitQuiz(event) {
 
     // if user attempts all questions, display score
     if (state.attempts === state.quizzes.length) {
+
         document.querySelector('#page').innerHTML =
             `<h2>You scored ${state.correct}/${state.attempts} (${state.correct / state.attempts * 100}%)</h2><button onClick="renderQuizList()">Try again?</button>` + document.querySelector('#page').innerHTML
+        const scoreDiv = document.querySelector('#score')
+        scoreDiv.innerHTML = ''
     }
 }
 
@@ -102,4 +110,11 @@ function deleteQuiz(event) {
             state.quizzes = state.quizzes.filter(quiz => quiz.id != quizId)
             renderQuizList()
         })
+}
+
+function updateScore() {
+    const scoreDiv = document.querySelector('#score')
+    scoreDiv.innerHTML = `
+        <h2>Score: ${state.correct}</h2>
+    `
 }
