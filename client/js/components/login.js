@@ -50,11 +50,7 @@ function renderSignedIn() {
     if (state.loggedInUser) {
         document.querySelector('#controls').innerHTML = `
             <li class="material-symbols-outlined home" onClick="renderSignedIn()">home</li>
-<<<<<<< HEAD
-            <li class="material-symbols-outlined add-quiz" onClick="renderAddQuiz()">add_circle</li>
-=======
             <li class="material-symbols-outlined add-quiz" onClick="renderAddQuiz()">add_circle</li>    
->>>>>>> update readme file
             <li class="material-symbols-outlined log-out" onClick="logOut()">logout</li>
         `
         renderQuizList()
