@@ -1,6 +1,7 @@
 /* Universal styling */
 * {
     box-sizing: border-box;
+    /* border: 1px red solid; */
 }
 
 body {
@@ -30,10 +31,10 @@ h1 {
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-p {
+/* p {
     font-family: "Roboto Serif", serif;
     color: #ffd166;
-}
+} */
 
 .correct {
     background-color: green;
@@ -41,4 +42,28 @@ p {
 
 .wrong {
     background-color: red;
+}
+
+.quiz ul {
+    padding-left: 1rem;
+}
+
+.quiz li {
+    list-style: none;
+}
+
+.quiz p,
+.quiz label,
+.quiz input {
+    display: inline;
+    width: auto;
+}
+
+.quiz input {
+    float: right;
+    margin-right: 2rem;
+}
+
+.quiz p {
+    padding: 0.25rem;
 }

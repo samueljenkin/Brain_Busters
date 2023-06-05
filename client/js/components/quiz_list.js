@@ -15,14 +15,29 @@ function renderQuizzes() {
                 <h2>${quiz.question}</h2>
             </header>
             <form action="" onSubmit="submitQuiz(event)">
-                <input type="radio" id="a" name="option" value="${quiz.answer_a}">
-                <label for="a">${quiz.answer_a}</label>
-                <input type="radio" id="b" name="option" value="${quiz.answer_b}">
-                <label for="b">${quiz.answer_b}</label>
-                <input type="radio" id="c" name="option" value="${quiz.answer_c}">
-                <label for="c">${quiz.answer_c}</label>
-                <input type="radio" id="d" name="option" value="${quiz.answer_d}">
-                <label for="d">${quiz.answer_d}</label>
+
+                <ul>
+                    <li>
+                        <p>a.</p>
+                        <label for="a">${quiz.answer_a}</label>
+                        <input type="radio" id="a" name="option" value="${quiz.answer_a}">
+                    </li>
+                    <li>
+                        <p>b.</p>
+                        <label for="b">${quiz.answer_b}</label>
+                        <input type="radio" id="b" name="option" value="${quiz.answer_b}">
+                    </li>
+                    <li>
+                        <p>c.</p>
+                        <label for="c">${quiz.answer_c}</label>
+                        <input type="radio" id="c" name="option" value="${quiz.answer_c}">
+                    </li>
+                    <li>
+                        <p>d.</p>
+                        <label for="d">${quiz.answer_d}</label>
+                        <input type="radio" id="d" name="option" value="${quiz.answer_d}">
+                    </li>
+                </ul>
                 <button>Submit</button>
             </form>
             <span class="edit" onClick="renderEditQuiz(event)">edit</span>
