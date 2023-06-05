@@ -25,7 +25,11 @@ With these intuitive features at your fingertips, you have full control over you
 	- Making the list for the additional features that can be added.
 	- Assigning tasks within group.
 	- Making use of Trello app for keeping track of individual tasks that are in progress or complete.
-	- Solving an error in code by Screensharing to make it easy and quick.
+	- Regulary testing the app after making changes to ensure the proper functioning of the application.
+	- Solving an error in code by Screensharing through Zoom to make it easy and quick.
+	- Celebrating smaller milestones to motivate each team member.
+	- Leveraging the strengths of indiviual team member expertise and skills.
+
 
 
 - Add screenshots/drawings of doodles/plans during the planning phase.
@@ -36,7 +40,7 @@ With these intuitive features at your fingertips, you have full control over you
 - Programming languages: CSS, JavaScript, HTML
 - Libraries: 
 - Animations: FadeIn, SlideIn
-- Really feel proud sound that plays the shows the answer is correct and when the answer is incorrect.
+- Really feel good about the sound that plays when the user chooses correct or incorrect answer.
 
 ## :scream: Bugs to fix :poop:
 - 
