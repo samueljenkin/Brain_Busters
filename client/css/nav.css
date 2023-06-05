@@ -14,12 +14,16 @@
     padding: 0 0.5rem;
 }
 
-/* If using material-symbols-outlined */
-/* .material-symbols-outlined {
+If using material-symbols-outlined
+.material-symbols-outlined {
     cursor: pointer;
 }
 
-.material-symbols-outlined.add-treasure {
+.material-symbols-outlined.add-quiz {
+    color: rgb(7, 92, 49);
+}
+
+.material-symbols-outlined.add-quiz {
     color: rgb(7, 92, 49);
 }
 
@@ -34,4 +38,4 @@
 .material-symbols-outlined.login,
 .material-symbols-outlined.delete {
     color: rgb(211, 34, 28);
-} */
+}
