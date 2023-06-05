@@ -17,24 +17,37 @@ With these intuitive features at your fingertips, you have full control over you
 ![in-app screenshot](client/images/Screenshot%202023-06-05%20at%2011.51.39%20am.png)
 
 ## :pencil2: Planning & Problem Solving
-- Talk about approach to the problem.
+
+- # Approach to the problem:
+ Our problem was to make a user friendly app to entertain users by making them take on an interesting quiz.
+	- Group discussion to jot down the ideas for making the application look appealing and interesting to users.
+	- keeping account of MVP(Minimum Viable Product) Criteria.
+	- Making the list for the additional features that can be added.
+	- Assigning tasks within group.
+	- Making use of Trello app for keeping track of individual tasks that are in progress or complete.
+	- Solving an error in code by Screensharing to make it easy and quick.
+
+
 - Add screenshots/drawings of doodles/plans during the planning phase.
 - Flow charts of app logic.
 ![Wireframing](client/images/Screenshot%202023-06-05%20at%2012.24.49%20pm.png)
 
 ## :rocket: Cool tech
-- Programming languages
-- Libraries
-- Animations
-- Anything else you'd be proud to show your parents
+- Programming languages: CSS, JavaScript, HTML
+- Libraries: 
+- Animations: FadeIn, SlideIn
+- Really feel proud sound that plays the shows the answer is correct and when the answer is incorrect.
 
 ## :scream: Bugs to fix :poop:
-- Anything a little broken
+- 
 - Anything a LOT broken
 - Buttons to not click too many times (cause its broken :unamused:)
 
 ## :sob: Lessons learnt
-What I would do differently if I could wind back the clock...
+- Want to have hidden cards under single card instead of showing up individiual cards.
+- Want to create category for questions and store them under different sections under specific card.
+
 
 ## :white_check_mark: Future features
-Cool things I would add if I can keep working on this
+Sound for celebration when user gets 100%  Quiz right.
+Want to include background music while user is taking test.
