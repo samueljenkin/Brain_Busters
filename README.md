@@ -14,19 +14,19 @@ Using our project is incredibly straightforward. Just follow these simple steps:
     - **Delete quizzes**: Remove any unwanted quizzes from the system.
 With these intuitive features at your fingertips, you have full control over your quiz experience. Start exploring, learning, and having fun right away!
 
-![in-app screenshot](client/images/Screenshot%202023-06-05%20at%2011.51.39%20am.png)
+Sign-up page: ![in-app screenshot](client/images/Screenshot%202023-06-05%20at%204.22.35%20pm.png)
+Home page: ![in-app screenshot](client/images/Screenshot%202023-06-05%20at%204.22.35%20pm.png)
 
 ## :pencil2: Planning & Problem Solving
-Our task was to make a user friendly app to entertain users by making them take on an interesting quiz.
-- Group discussion to jot down the ideas for making the application look appealing and interesting to users.
-- keeping account of MVP(Minimum Viable Product) Criteria.
-- Making the list for the additional features that can be added.
-- Assigning tasks within group.
-- Making use of Trello app for keeping track of individual tasks that are in progress or complete.
-- Regulary testing the app after making changes to ensure the proper functioning of the application.
-- Solving an error in code by Screensharing through Zoom to make it easy and quick.
-- Celebrating smaller milestones to motivate each team member.
-- Leveraging the strengths of indiviual team member expertise and skills.
+Our team took on the task of developing a user-friendly quiz application using Node Express. Below, you can see the key steps we followed in the planning and problem-solving process to ensure the success of our project.
+- Brainstormed ideas as a group to create an appealing and interesting quiz web application.
+- Identified the Minimum Viable Product (MVP) criteria and established additional features for future development.
+- Assigned tasks to team members based on their individual expertise and skills.
+- Utilised the Trello app to track and manage the progress of individual tasks.
+- Conducted regular testing to ensure the proper functioning of the application after making changes.
+- Collaboratively resolved coding errors by utilising Zoom screensharing for quick and efficient problem-solving.
+- Celebrated smaller milestones throughout the project to motivate and encourage team members.
+- Leveraged the unique strengths and expertise of each team member to optimise productivity and efficiency.
 
 ![Planning](client/images/Screenshot%202023-06-05%20at%202.35.46%20pm.png)
 ![Wireframing](client/images/Screenshot%202023-06-05%20at%2012.24.49%20pm.png)
