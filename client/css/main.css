@@ -2,18 +2,29 @@
 * {
     box-sizing: border-box;
     /* border: 1px red solid; */
-    backdrop-filter: blur(10px)
-    
+}
+
+.page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Adding blur background image */
+    padding: 0 2rem;
 }
 
 body {
-    
     background-image: url("https://img.freepik.com/premium-vector/question-mark-from-cardboard_594089-433.jpg");
     background-size: cover;
     background-repeat: no-repeat;  
-    backdrop-filter: blur(10px)
-    
-    
+}
+
+body.background {
+    filter: blur(10px);
 }
 
 /* Form styling */
@@ -35,11 +46,11 @@ form textarea {
 }
 
 h1 {
-    font-size: xx-large;
+    font-size: 4rem;
     text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    
+    text-align: center;
 }
+
 @keyframes slideIn {
     0% {
       transform: translateY(-100%);

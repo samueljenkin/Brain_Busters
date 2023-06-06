@@ -93,6 +93,7 @@ function submitQuiz(event) {
     // update the score
     updateScore()
 
+    // If we want to push the quiz to the bottom
     // const quiz = state.quizzes.find(quiz => quiz.id == quizId)
     // state.quizzes = state.quizzes.filter(quiz => quiz.id != quizId)
     // state.quizzes.push(quiz)

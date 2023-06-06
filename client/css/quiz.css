@@ -8,8 +8,10 @@
     border: 1px solid rgb(9, 51, 98);
     padding: 0 1rem;
     box-shadow: 3px 3px 3px rgb(9, 51, 98);
+    border-radius: 1rem;
 }
-  /* Animations */
+
+/* Animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
