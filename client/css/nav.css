@@ -23,19 +23,23 @@
     color: rgb(7, 92, 49);
 }
 
-.material-symbols-outlined.add-quiz {
-    color: rgb(7, 92, 49);
+.material-symbols-outlined.edit {
+    color: rgb(165, 111, 12);
 }
 
-.material-symbols-outlined.edit-treasure {
-    color: rgb(165, 111, 12);
+.material-symbols-outlined.home {
+    color: goldenrod;
 }
 
 .material-symbols-outlined.sign-up {
     color: rgb(9, 51, 98);
 }
 
-.material-symbols-outlined.login,
+.material-symbols-outlined.log-out,
 .material-symbols-outlined.delete {
     color: rgb(211, 34, 28);
+}
+
+.material-symbols-outlined.login {
+    color: rgb(7, 92, 49);
 }
