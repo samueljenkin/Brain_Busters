@@ -17,7 +17,6 @@ function renderQuizzes() {
                 <h2>${quiz.question}</h2>
             </header>
             <form action="" onSubmit="submitQuiz(event)">
-
                 <ul>
                     <li>
                         <p>a.</p>
@@ -40,10 +39,14 @@ function renderQuizzes() {
                         <input type="radio" id="d" name="option" value="${quiz.answer_d}">
                     </li>
                 </ul>
-                <button>Submit</button>
+                <section class='quiz-controllers'>
+                    <button>Submit</button>
+                    <section>
+                        <span class="material-symbols-outlined edit" onClick="renderEditQuiz(event)">edit</span>
+                        <span class="material-symbols-outlined delete" onClick="deleteQuiz(event)">delete</span>
+                    </section>
+                </section>
             </form>
-            <span class="material-symbols-outlined edit" onClick="renderEditQuiz(event)">edit</span>
-             <span class="material-symbols-outlined delete" onClick="deleteQuiz(event)">delete</span>
         </section>
     `).join('')
 }
@@ -89,6 +92,12 @@ function submitQuiz(event) {
 
     // update the score
     updateScore()
+
+    // const quiz = state.quizzes.find(quiz => quiz.id == quizId)
+    // state.quizzes = state.quizzes.filter(quiz => quiz.id != quizId)
+    // state.quizzes.push(quiz)
+    // renderQuizList()
+    // console.log(state.quizzes)
 
     // if user attempts all questions, display score
     if (state.attempts === state.quizzes.length) {

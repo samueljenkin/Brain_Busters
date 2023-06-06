@@ -31,3 +31,9 @@
 .quiz {
     animation: fadeIn 0.10s ease-in-out, slideIn 0.9s ease-in-out;
 }
+
+.quiz-controllers {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 2rem 1rem 2rem;
+}
