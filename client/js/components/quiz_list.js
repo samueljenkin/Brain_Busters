@@ -6,8 +6,9 @@ function renderQuizList() {
             ${renderQuizzes()}
         </section> 
     `
-    // const audioGathering = document.getElementById("gatheringSound")
-    // audioGathering.play()
+    const audioGathering = document.getElementById("gatheringSound")
+    audioGathering.volume = 0.1
+    audioGathering.play()
 }
 
 function renderQuizzes() {
