@@ -9,7 +9,6 @@ CREATE TABLE quizzes(
     answer_c TEXT,
     answer_d TEXT,
     correct_answer TEXT
-    -- only an example, require group discussion (same style as API?)
 );
 
 INSERT INTO quizzes(question, answer_a, answer_b, answer_c, answer_d, correct_answer)
