@@ -1,7 +1,7 @@
 # Brain Busters
 Welcome to Brain Busters' Quiz Questionnaire, the ultimate destination to test your knowledge and have a great time! Our user-friendly web application is designed to provide an enjoyable and seamless quiz experience. Challenge yourself and see if you can achieve a perfect score of 100%! Join us now and embark on an exciting journey of learning and fun.
 
-## :computer: [Click here](https://quiz-app-zshl.onrender.com/) to see my live project!
+## :computer: [Click here](https://brain-busters-app.onrender.com/) to see my live project!
 
 ## :page_facing_up: About
 Using our project is incredibly straightforward. Just follow these simple steps:
